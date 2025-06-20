@@ -1,6 +1,12 @@
 body {
-    background-color: #89C4FF;
-    background-image: url('../images/atlas.png');
-    font-family: "Fredoka", sans-serif;
-    color: #44251A;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Fredoka", sans-serif;
+  text-align: center;
+  background-color: #89C4FF;
+  color: #44251A;
+  background-image: url('../images/atlas.png');
+  background-size: cover;
 }
+
