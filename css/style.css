@@ -1,12 +1,303 @@
+html {
+    height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/atlas.png');
+  background-size: cover;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100%;
   font-family: "Fredoka", sans-serif;
+  font-weight: 600;
   text-align: center;
   background-color: #89C4FF;
   color: #44251A;
-  background-image: url('../images/atlas.png');
-  background-size: cover;
+}
+
+.page-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    width: 1100px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #FFCF7F;
+    border-radius: 30px;
+    border: 4px solid #44251A;
+}
+
+.page-title {
+  margin-top: -60px;
+}
+
+.page-title-image {
+  width: 500px;
+}
+
+.local-time-zone-container,
+.select-city-container,
+.selected-city-data-container,
+.passport-container {
+  background-color: #FEFBEC;
+  margin: 8px auto;
+  border-radius: 50px;
+  border: 3px solid #44251A;
+}
+
+.local-time-zone-container {
+  width: 900px;
+  height: 100px;
+  margin-top: -27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.local-location-icon {
+  width: 50px;
+}
+
+.local-location-display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 15px;
+}
+
+.local-location {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.local-time-date-display {
+  display: flex;
+  flex-direction: column;
+  align-items: end; 
+  line-height: 33px;
+  margin: 0 30px;
+}
+
+.local-time {
+  font-size: 26px;
+  margin: 0;
+}
+
+.local-date {
+  font-size: 19px;
+  margin: 0;
+}
+
+.select-city-container {
+  width: 900px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-city-container select {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 12px;
+    width: 98%;
+    border: 2px solid #44251A;
+    border-radius: 50px;
+    background-color: #FEFBEC;
+    color: #44251A;
+    font-family: "Fredoka", sans-serif;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background-image: url('../images/dropdown-icon.png');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.display-and-game-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 5px auto;
+}
+
+.selected-city-data-container,
+.passport-container {
+  width: 420px;
+  height: 350px;
+  margin: 5px 15px;
+}
+
+.selected-city-data-container {
+  text-align: left;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 15px;
+}
+
+.city-time-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40%;
+  padding: 15px ;
+}
+
+.selected-city {
+  font-size: 42px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.selected-city-date {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.selected-city-time {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.selected-city-date-time-display {
+  display: flex;
+  flex-direction: column;
+  align-items: end; 
+  line-height: 33px;
+  margin: 0 30px;
+}
+
+
+.city-fact-container {
+  background-color: #C7E9C0; /* green */
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 8px;
+}
+
+.fact-image {
+  width: 140px;
+  height: auto;
+}
+
+.city-fact {
+  font-size: 22px;
+  color: #44251A;
+  max-width: 250px;
+  line-height: 30px;
+}
+
+.passport-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.passport-game-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.stamp {
+  width: 100px;
+}
+
+.passport-container h2{
+  font-size: 26px;
+}
+
+.passport-container p{
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+.stamp-collection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 8px 8px 15px;
+}
+
+.scroll-arrow {
+  width:20px;
+}
+
+.progress-bar-container {
+  display: flex;
+  justify-items: center;
+  width: 370px;
+  background-color: #FEFBEC;
+  height: 30px;
+  margin: 20px auto 8px auto;
+  padding: 1px;
+  border-radius: 50px;
+  border: 3px solid #44251A;
+}
+
+.progress-bar-fill {
+  margin: 3px;
+  background-color: #44251A;
+  height:25px;
+  border-radius: 50px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  border: none;
+  justify-content: flex-start;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px 10px 25px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FEFBEC;
+    text-shadow:
+   -2px -2px 0 #44251a,
+    2px -2px 0 #44251a,
+   -2px 2px 0 #44251a,
+    2px 2px 0 #44251a,
+    0px 2px 0 #44251a,
+    2px 0px 0 #44251a,
+    0px -2px 0 #44251a,
+   -2px 0px 0 #44251a; 
+    font-size: 33px;
+    font-weight: 500;
+}
+
+footer a {
+    font-weight: 500;
+    color: #C7E9C0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 

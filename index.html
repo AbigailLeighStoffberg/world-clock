@@ -3,18 +3,107 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Styles -->
         <link rel="stylesheet" href="./css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Scripts -->
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+
         <title>World Clock - Abigail-Leigh Stoffberg</title>
     </head>
     <body>
-        <h1>World Clock</h1>
+        <div class="page-wrapper">
+            <main class="page-container">
+                
+                <header class="page-header">
+                    <h1 class="page-title">
+                        <img src="./images/title-img.png" class="page-title-image" alt="World Clock Title" />
+                    </h1>
+                </header>
+
+                <!-- Local Time Section -->
+                <section class="local-time-zone-container">
+                    <div class="local-location-display">
+                        <img src="./images/location-image.png" alt="Happy Face Icon" class="local-location-icon" />
+                        <h2 class="local-location" id="local-city">Europe/Athens</h2>
+                    </div>
+                    <div class="local-time-date-display">
+                        <p class="local-time
+                        " id="local-time">09:45:10 PM</p>
+                        <p class="local-date" id="local-date">June 17, 2025</p>
+                    </div>
+                </section>
+
+                <!-- City Selection Section -->
+                <section class="select-city-container">
+                    <select id="city">
+                        <option value="">Select a city</option>
+                        <option value="Europe/Paris">Paris 🇫🇷</option>
+                        <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+                        <option value="Australia/Sydney">Sydney 🇦🇺</option>
+                    </select>
+                </section>
+
+                <!-- Display and Game Display -->
+                <div class="display-and-game-container">
+                    <!-- Selected City Timezone Display -->
+                    <section class="selected-city-data-container">
+                        <div class="city-time-info">
+                            <h2 class="selected-city" id="selected-city-name">London</h2>
+                            <div class="selected-date-time-display">
+                                <p class="selected-city-time right" id="selected-city-time">07:45:10 PM</p>
+                                <p class="selected-city-date right" id="selected-city-date">June 17, 2025</p>
+                            </div>
+                        </div>
+
+                        <div class="city-fact-container">
+                            <img src="./images/lightbulb-image.png" alt="Character holding lightbulb" class="fact-image" />
+                            <p class="city-fact" id="selected-city-fact">
+                            Big Ben is the name of the bell, not the clock tower.
+                            </p>
+                        </div>
+                        </section>
+                    <!-- Passport Game Section-->
+                    <section class="passport-container">
+                        <div class="passport-game-intro">
+                            <h2>My Passport</h2>
+                            <p>Collect a stamp for each new timezone you visit! Can you collect them all?</p>
+                        </div>
+                            <div class="stamp-collection">
+                                <img src="./images/scroll-left.png" class="scroll-arrow" id="scroll-arrow-left" />
+                                <img src="./images/stamp-bg.png" class="stamp" id="first-stamp" />
+                                <img src="./images/stamp-bg.png" class="stamp" id="second-stamp" />
+                                <img src="./images/stamp-bg.png" class="stamp" id="third-stamp" />
+                                <img src="./images/scroll-right.png" class="scroll-arrow" id="scroll-arrow-right"/>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar-container" id="progress-bar">
+                                    <span class="progress-bar-fill" id="progress-fill">-----</span>
+                                </div>
+                                <div class="progress-text">
+                                    <p>Collection Progress</p>
+                                    <p id="progress-amount">01/24</p>
+                                </div> 
+                            </div> 
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
 
         <footer>
-            Coded by <a href = "https://github.com/AbigailLeighStoffberg" target = "_blank">Abigail-Leigh Stoffberg</a>, open-sourced on <a href = "https://github.com/AbigailLeighStoffberg/world-clock" target="_blank">Github</a>, and hosted on <a href = "https://world-clocks-for-kids.netlify.app/" target="_blank">Netlify</a>.
+            Coded by
+            <a href="https://github.com/AbigailLeighStoffberg" target="_blank">Abigail-Leigh Stoffberg</a>, open-sourced on 
+            <a href = "https://github.com/AbigailLeighStoffberg/world-clock" target="_blank">Github</a>, and hosted on 
+            <a href = "https://world-clocks-for-kids.netlify.app/" target="_blank">Netlify</a>.
         </footer>
+        
         <script src="javascript/app.js"></script>
     </body>
 </html>
