@@ -63,7 +63,8 @@ body {
 }
 
 .local-location-icon {
-  width: 50px;
+  width: 55px;
+  padding-left: 8px;
 }
 
 .local-location-display {
@@ -76,28 +77,29 @@ body {
 
 .local-location {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 33px;
 }
 
 .local-time-date-display {
   display: flex;
   flex-direction: column;
   align-items: end; 
-  line-height: 33px;
+  line-height: 36px;
   margin: 0 30px;
 }
 
 .local-time {
-  font-size: 26px;
+  font-size: 30px;
   margin: 0;
 }
 
 .local-date {
-  font-size: 19px;
+  font-size: 22px;
   margin: 0;
 }
 
 .select-city-container {
+  background-color: #D5FFA3;
   width: 900px;
   height: 80px;
   display: flex;
@@ -106,7 +108,7 @@ body {
 }
 
 .select-city-container select {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
     padding: 12px;
     width: 98%;
@@ -141,29 +143,42 @@ body {
 }
 
 .selected-city-data-container {
+  background: url('../images/data-display-bg.png') no-repeat center center;
+  background-size: contain;
+  color: #FEFBEC;
+  text-shadow:
+   -2px -2px 0 #44251a,
+    2px -2px 0 #44251a,
+   -2px 2px 0 #44251a,
+    2px 2px 0 #44251a,
+    0px 2px 0 #44251a,
+    2px 0px 0 #44251a,
+    0px -2px 0 #44251a,
+   -2px 0px 0 #44251a; 
   text-align: left;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   overflow: hidden;
   line-height: 15px;
 }
 
+.selected-city-data-container.no-selection {
+  background: url('../images/city-pls-image.png') no-repeat center center;
+  background-size: contain;
+  background-color: #FEFBEC;
+  color: transparent;
+}
+
+.selected-city-data-container.no-selection * {
+  visibility: hidden;
+}
+
 .city-time-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 40%;
-  padding: 15px ;
+  padding-left: 20px ;
 }
 
 .selected-city {
   font-size: 42px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .selected-city-date {
@@ -176,39 +191,6 @@ body {
   font-weight: 600;
 }
 
-.selected-city-date-time-display {
-  display: flex;
-  flex-direction: column;
-  align-items: end; 
-  line-height: 33px;
-  margin: 0 30px;
-}
-
-
-.city-fact-container {
-  background-color: #C7E9C0; /* green */
-  height: 80%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  padding: 8px;
-}
-
-.fact-image {
-  width: 140px;
-  height: auto;
-}
-
-.city-fact {
-  font-size: 22px;
-  color: #44251A;
-  max-width: 250px;
-  line-height: 30px;
-}
-
 .passport-container {
   padding-left: 10px;
   padding-right: 10px;
@@ -218,6 +200,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; 
+  margin-top: -15px;
 }
 
 .stamp {
@@ -225,11 +208,11 @@ body {
 }
 
 .passport-container h2{
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .passport-container p{
-  font-size: 18px;
+  font-size: 20px;
   margin-top: -5px;
 }
 
